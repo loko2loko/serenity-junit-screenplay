@@ -2,6 +2,7 @@
 
 Professional test automation framework demonstrating **Serenity BDD Screenplay pattern** with real-world e-commerce test scenarios.
 
+![Tests](https://github.com/loko2loko/serenity-junit-screenplay/workflows/Build/badge.svg)
 [![Java](https://img.shields.io/badge/Java-17-orange.svg)](https://www.oracle.com/java/)
 [![Selenium](https://img.shields.io/badge/Selenium-4.x-green.svg)](https://www.selenium.dev/)
 
