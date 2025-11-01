@@ -1,6 +1,6 @@
-# 🛒 E-Commerce Test Automation Framework
+# 🔍 Wikipedia Test Automation Framework
 
-Professional test automation framework demonstrating **Serenity BDD Screenplay pattern** with real-world e-commerce test scenarios.
+Professional test automation framework demonstrating **Serenity BDD Screenplay pattern** with Wikipedia search and article validation scenarios.
 
 [![Java](https://img.shields.io/badge/Java-17-orange.svg)](https://www.oracle.com/java/)
 [![Selenium](https://img.shields.io/badge/Selenium-4.x-green.svg)](https://www.selenium.dev/)
@@ -10,11 +10,8 @@ Professional test automation framework demonstrating **Serenity BDD Screenplay p
 ## 🎯 Project Overview
 
 This project showcases enterprise-level test automation practices including:
-- **Screenplay Pattern** for maintainable test code
-- **Page Object Model** implementation
 - **CI/CD integration** with GitHub Actions
 - **Comprehensive test reporting** with Serenity BDD
-- **Cross-browser testing** capabilities
 
 ---
 
@@ -28,26 +25,30 @@ This project showcases enterprise-level test automation practices including:
 | **JUnit 5**            | Test runner |
 | **Maven**              | Build & dependency management |
 | **GitHub Actions**     | CI/CD pipeline |
+| **AssertJ**            | Fluent assertions |
 
 ---
 
 ## 📋 Test Scenarios
 
-### User Authentication
-- ✅ Valid user login
-- ✅ Invalid credentials handling
-- ✅ Session management
+### 🔍 Wikipedia Search & Validation
+**Test 1: Reliable Topic Search**
+- Search for specific topics (e.g., "cucumber")
+- Validate Wikipedia page structure
+- Extract and verify page titles
+- Demonstrate reliable search patterns
 
-### Shopping Cart Operations
-- ✅ Add products to cart
-- ✅ Remove products from cart
-- ✅ Update quantities
-- ✅ Cart persistence
+**Test 2: Direct Article Access**
+- Open specific Wikipedia articles by exact URL
+- Programming languages: Java, Python, Cucumber
+- Validate article accessibility
+- Verify page content integrity
 
-### Product Search & Filtering
-- ✅ Search functionality
-- ✅ Filter by category
-- ✅ Sort options
+**Test 3: Multi-Topic Batch Search**
+- Batch search across technology stack topics
+- Technologies tested: JavaScript, HTML, CSS, React
+- Iterative validation approach
+- Console logging for test transparency
 
 ---
 
@@ -70,6 +71,15 @@ cd serenity-junit-screenplay
 
 # Run tests
 mvn clean verify
+```
+
+### Run Specific Tests
+```bash
+# Run Wikipedia search tests only
+mvn test -Dtest=SimpleWikipediaTest
+
+# Run with specific browser
+mvn clean verify -Dwebdriver.driver=chrome
 ```
 
 ---
@@ -105,12 +115,25 @@ View workflow: [.github/workflows/maven.yml](.github/workflows/maven.yml)
 ```
 serenity-junit-screenplay/
 ├── src/
-│   └── test/java/          # Test scenarios
-│       ├── starter/        # Test classes
+│   └── test/java/
+│       └── starter/
+│           ├── wikipedia/
+│           │   └── SimpleWikipediaTest.java    # Test scenarios
+│           └── pages/
+│               └── SimpleWikipediaPage.java    # Page Object
 ├── .github/workflows/      # CI/CD configuration
 ├── pom.xml                 # Maven dependencies
 └── README.md              # This file
 ```
+
+---
+
+## 🎓 Learning Outcomes
+
+This project demonstrates:
+- ✅ Selenium WebDriver best practices
+- ✅ CI/CD integration with GitHub Actions
+- ✅ Professional test reporting
 
 ---
 
